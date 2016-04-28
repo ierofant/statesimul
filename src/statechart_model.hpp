@@ -5,7 +5,8 @@
 
 class statechart_model : public state_model
 {
-
+public:
+    statechart_model();
 };
 
 #endif //STATECHART_MODEL_HPP

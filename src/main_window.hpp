@@ -9,6 +9,7 @@ namespace Ui
     class main_window;
 }
 
+class statechart_model;
 class main_window : public QMainWindow
 {
     Q_OBJECT
@@ -20,6 +21,7 @@ public:
 private:
     Ui::main_window *ui;
     drawing_area area;
+    std::shared_ptr<statechart_model> statechart;
 };
 
 #endif //MAIN_WINDOW_HPP

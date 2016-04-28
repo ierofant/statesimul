@@ -10,6 +10,11 @@ drawing_area::drawing_area(QWidget *parent)
 
 }
 
+void drawing_area::set_current_state(const std::shared_ptr<state_model> &state)
+{
+    current_state = state;
+}
+
 void drawing_area::on_action(QAction *action)
 {
     std::cout << action->text().toStdString() << std::endl;
@@ -17,8 +22,10 @@ void drawing_area::on_action(QAction *action)
 
 /*virtual*/ void drawing_area::paintEvent(QPaintEvent *event)
 {
-    diagram_painter painter(this);
-    painter.drawRect(0, 0, 10, 10);
+    if (current_state)
+    {
+	
+    }
 }
 
 /*virtual*/ void drawing_area::mousePressEvent(QMouseEvent *event)

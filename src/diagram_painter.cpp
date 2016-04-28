@@ -14,5 +14,6 @@ void diagram_painter::draw_statechart(const statechart_model &statechart)
 
 void diagram_painter::draw_state(const state_model &state)
 {
-
+    auto box = state.get_box();
+    drawRect(box);
 }
